@@ -1,0 +1,23 @@
+plugin.tx_demo {
+	view {
+		templateRootPaths.0 = {$plugin.tx_demo.view.templateRootPaths.0}
+		partialRootPaths.0 = {$plugin.tx_demo.view.partialRootPaths.0}
+		layoutRootPaths.0 = {$plugin.tx_demo.view.layoutRootPaths.0}
+	}
+	settings {
+		test= {$plugin.tx_demo.settings.test}
+		
+	}
+}
+config.contentObjectExceptionHandler = 0 
+
+plugin.tx_vhs.settings.asset {
+    script {
+        name = script
+        path = EXT:demo/Resources/Public/JavaScripts/lib.js
+    }
+    styles {
+        name = styles
+        path = EXT:demo/Resources/Public/JavaScripts/lib.css
+    }
+}

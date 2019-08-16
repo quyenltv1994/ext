@@ -1,0 +1,32 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+	xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+	<f:layout name="Content" />
+
+	<f:section name="Configuration">
+		<flux:form id="demo" options="{group: 'FCE'}">
+			<!-- Insert fields, sheets, grid, form section objects etc. here, in this flux:flexform tag -->
+			<flux:field.input name="settings.test" required="true" />
+			<flux:field.checkbox name="check" label="enable?" />
+		</flux:form>
+	</f:section>
+
+	<f:section name="Preview">
+		<!-- If you wish, place custom backend preview content here -->
+		<strong>Your Input:</strong><br />
+		{settings.helloWorld}
+	</f:section>
+
+	<f:section name="Main">
+		<f:if condition="{check}">
+			<f:then>
+				YES {settings.test}
+			</f:then>
+			<f:else>
+				NOGO AWAY
+			</f:else>
+		</f:if>
+	</f:section>
+</div>

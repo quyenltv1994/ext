@@ -1,0 +1,12 @@
+plugin.tx_demo {
+	view {
+		templateRootPaths.0 = EXT:demo/Resources/Private/Templates/
+		partialRootPaths.0 = EXT:demo/Resources/Private/Partials/
+		layoutRootPaths.0 = EXT:demo/Resources/Private/Layouts/
+	}
+	settings {
+		# cat=pagesetup/xxx/010; type=string; label= string: my String
+		test = I am a string
+
+	}
+}
